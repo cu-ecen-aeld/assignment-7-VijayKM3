@@ -28,6 +28,7 @@ clean:
 .PHONY: modules modules_install clean
 
 else
+	ccflags-y += -I$(src)/../include
     # called from kernel build system: just declare what our modules are
     obj-m := hello.o hellop.o seq.o jiq.o sleepy.o complete.o \
              silly.o faulty.o kdatasize.o kdataalign.o jit.o
